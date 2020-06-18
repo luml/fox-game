@@ -57,21 +57,21 @@ body {
   display: flex;
   justify-content: center;
 }
-.icons {
-  color: yellowgreen;
-  font-size: 0.5rem;
-  text-align: center;
-}
 
 .icons {
   position: absolute;
   top: 572px;
   left: 194px;
-  height: 67px;
+  height: 85px;
   width: 374px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.icons div p {
+  font-size: 15px;
+    color: pink;
+    margin-top: -0.25rem;
 }
 
 /* poop bag */
