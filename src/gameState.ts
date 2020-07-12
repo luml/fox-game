@@ -63,7 +63,7 @@ const gameState = {
     this.state = "SLEEP";
     modFox("sleep");
     modScene("night");
-    clearTime();
+    this.clearTime();
     this.wakeTime = this.clock + NIGHT_LENGTH;
   },
   clearTime() {
@@ -144,7 +144,7 @@ const gameState = {
     this.determineFoxState();
   },
   cleanUpPoop() {
-    if (!this.current === "POOPING") {
+    if (this.current !== "POOPING") {
       return;
     }
     this.dieTime = -1;
