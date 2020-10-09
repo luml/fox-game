@@ -8,7 +8,7 @@ async function init() {
 
   let nextTimeToTick = Date.now();
 
-  function nextAnimationFrame() {
+  function nextAnimationFrame(): void {
     const now = Date.now();
 
     if (nextTimeToTick <= now) {
