@@ -68,11 +68,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.icons div p {
-  font-size: 15px;
-  color: pink;
-  margin-top: -0.25rem;
-}
 
 /* poop bag */
 .poop-bag {
