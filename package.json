@@ -11,6 +11,7 @@
   "author": "Elio",
   "license": "ISC",
   "devDependencies": {
+    "@vue/cli-plugin-typescript": "~4.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.21.2",
     "parcel-bundler": "^1.12.4",
