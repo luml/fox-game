@@ -1,17 +1,17 @@
 export const modFox = function modFox(state: string) {
-  document.querySelector(".fox").className = `fox fox-${state}`;
+  (document.querySelector(".fox") as Element).className = `fox fox-${state}`;
 };
 
 export const modScene = function (state: string) {
-  document.querySelector(".game").className = `game ${state}`;
+  (document.querySelector(".game") as Element).className = `game ${state}`;
 };
 
 export const togglePoopBag = function togglePoopBag(show: boolean) {
-  document.querySelector(".poop-bag").classList.toggle("hidden", !show);
+  (document.querySelector(".poop-bag") as Element).classList.toggle("hidden", !show);
 };
 
 export const writeModal = function writeModal(text = "") {
-  document.querySelector(
+  (document.querySelector(
     ".modal"
-  ).innerHTML = `<div class="modal-inner">${text}</div>`;
+  ) as Element).innerHTML = `<div class="modal-inner">${text}</div>`;
 };
