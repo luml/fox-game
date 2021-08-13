@@ -8,12 +8,12 @@ const toggleHighlighted = (icon: number, show: boolean) =>
 export default function initButtons(hanleUserAction: any) {
   let selectedIcon = 0;
   // make icon can loop around no matter which button you clicked
-  function buttonClick({ target }): void {
-    if (target.classList.contains("left-btn")) {
+  function buttonClick( obj : {target: any}): void {
+    if (obj.target.classList.contains("left-btn")) {
       toggleHighlighted(selectedIcon, false);
       selectedIcon = (2 + selectedIcon) % ICONS.length;
       toggleHighlighted(selectedIcon, true);
-    } else if (target.classList.contains("right-btn")) {
+    } else if (obj.target.classList.contains("right-btn")) {
       toggleHighlighted(selectedIcon, false);
       selectedIcon = (1 + selectedIcon) % ICONS.length;
       toggleHighlighted(selectedIcon, true);
@@ -22,5 +22,5 @@ export default function initButtons(hanleUserAction: any) {
     }
   }
 
-  document.querySelector(".buttons").addEventListener("click", buttonClick);
+  (document.querySelector(".buttons") as Element).addEventListener("click", buttonClick);
 }
